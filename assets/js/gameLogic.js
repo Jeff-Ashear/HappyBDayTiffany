@@ -27,7 +27,17 @@ $(function() {
         if (userAnswer == correctAnswer[step]) {
             $('#feedback').text("You're right!!! Hurray!!!")
             step += 1
-            $('#hint').text(prompt[step])
+            let thisPrompt = ""
+            for (let i = 0; i < prompt[step].length; i++) {
+                interval = Math.ceil(Math.random() * 10) * 100
+                setTimeout(function(str) {
+                    thisPrompt = thisPrompt + prompt[step][i]
+                    // console.log(prompt[step][i])
+                    $('#hint').text(thisPrompt)
+                    // console.log(thisPrompt)
+                }, interval)
+            }
+            // $('#hint').text(prompt[step])
         } else {
             $('#feedback').text(sorry)
         }
