@@ -10,11 +10,27 @@
 </head>
 <body>
     <div>
-       <form>
-            <input type="text" id="testInput">
-            <button id="testBtn">Submit</button>
+       <form id="testForm">
+            <input type="text" id="testInput" />
+            <!-- <button id="testBtn">Submit</button> -->
+            <input type="submit" id="submit" value="submit" />
        </form>
+    </div>
+    <div>
+        <p id="testOutput"></p>
+    </div>
 
+    <div id="hint">
+        <p class="hint">It's a place with catfood</p>
+    </div>
+    <div>
+        <form action="" id="answer">
+            <input type="text" id="answerText" />
+            <input type="submit" id="submit" value="submit" />
+        </form>
+    </div>
+    <div class="response">
+        <p id="feedback"></p>
     </div>
 
 </body>
